@@ -4,5 +4,9 @@
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="lib" path="C:/Program Files (x86)/OpenRTM-aist/1.0/jar/OpenRTM-aist-1.0.0.jar"/>
 	<classpathentry kind="lib" path="C:/Program Files (x86)/OpenRTM-aist/1.0/jar/commons-cli-1.1.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/FIROSOPHYEngine"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/OpenStateMachineUI"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/OpenRTSystemBuilder"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/OpenStateMachine"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
