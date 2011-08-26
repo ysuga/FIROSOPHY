@@ -10,6 +10,7 @@ package net.ysuga.firosophy.ui;
 
 import net.ysuga.firosophy.FIROSOPHY;
 import net.ysuga.statemachine.state.State;
+import net.ysuga.statemachine.ui.StateMachinePanel;
 import net.ysuga.statemachine.ui.state.AbstractStateSettingDialog;
 import net.ysuga.statemachine.ui.state.DefaultStateSettingDialogFactory;
 
@@ -49,8 +50,8 @@ public class RTStateSettingDialogFactory extends
 	 * </div>
 	 */
 	@Override
-	public AbstractStateSettingDialog createStateSettingDialog(State state) {
-		return new RTStateSettingDialog(state);
+	public AbstractStateSettingDialog createStateSettingDialog(StateMachinePanel panel, State state) {
+		return new RTStateSettingDialog(panel, state);
 	}
 
 	/**

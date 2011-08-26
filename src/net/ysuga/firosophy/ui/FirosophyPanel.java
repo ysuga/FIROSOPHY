@@ -10,6 +10,7 @@ import net.ysuga.firosophy.FIROSOPHY;
 import net.ysuga.statemachine.StateMachine;
 import net.ysuga.statemachine.exception.InvalidFSMFileException;
 import net.ysuga.statemachine.ui.StateMachinePanel;
+import net.ysuga.statemachine.ui.guard.GuardSettingDialogFactoryManager;
 
 /**
  * FirosophyPanel.java
@@ -43,6 +44,8 @@ public class FirosophyPanel extends StateMachinePanel {
 	 */
 	public FirosophyPanel() throws ParserConfigurationException {
 		super();
+		
+		GuardSettingDialogFactoryManager.add(new StateEqualsGuardSettingDialogFactory());
 	}
 	
 	@Override
