@@ -19,6 +19,7 @@ import net.ysuga.firosophy.guard.StateEqualsGuard;
 import net.ysuga.firosophy.state.RTState;
 import net.ysuga.rtsbuilder.RTCCondition;
 import net.ysuga.rtsystem.profile.Component;
+import net.ysuga.rtsystem.profile.RTSProperties;
 import net.ysuga.rtsystem.profile.RTSystemProfile;
 import net.ysuga.statemachine.StateMachineTagNames;
 import net.ysuga.statemachine.exception.InvalidGuardException;
@@ -64,7 +65,7 @@ public class StateEqualsGuardSettingDialog extends AbstractGuardSettingDialog {
 		}
 		try {
 			RTSystemProfile profile = new RTSystemProfile(new File(rtState.getFileName()));
-			for(Component component : profile.componentSet) {
+			for(RTSProperties component : profile.componentSet) {
 				componentComboBox.addItem(component.get(Component.PATH_URI));
 			}
 		} catch (Exception e) {
