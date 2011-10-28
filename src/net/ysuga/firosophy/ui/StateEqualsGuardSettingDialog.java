@@ -18,7 +18,7 @@ import net.ysuga.firosophy.FIROSOPHY;
 import net.ysuga.firosophy.guard.StateEqualsGuard;
 import net.ysuga.firosophy.state.RTState;
 import net.ysuga.rtsbuilder.RTCCondition;
-import net.ysuga.rtsystem.profile.Component;
+import net.ysuga.rtsystem.profile.RTComponent;
 import net.ysuga.rtsystem.profile.RTSProperties;
 import net.ysuga.rtsystem.profile.RTSystemProfile;
 import net.ysuga.statemachine.StateMachineTagNames;
@@ -41,7 +41,7 @@ public class StateEqualsGuardSettingDialog extends AbstractGuardSettingDialog {
 	private RTState rtState;
 	/**
 	 * <div lang="ja">
-	 * ƒRƒ“ƒXƒgƒ‰ƒNƒ^
+	 * ï¿½Rï¿½ï¿½ï¿½Xï¿½gï¿½ï¿½ï¿½Nï¿½^
 	 * @param transitionSettingDialog
 	 * @param guard
 	 * </div>
@@ -54,7 +54,7 @@ public class StateEqualsGuardSettingDialog extends AbstractGuardSettingDialog {
 	public StateEqualsGuardSettingDialog(
 			TransitionSettingDialog transitionSettingDialog, Guard guard) {
 		super(transitionSettingDialog, guard);
-		// TODO ©“®¶¬‚³‚ê‚½ƒRƒ“ƒXƒgƒ‰ƒNƒ^[EƒXƒ^ƒu
+		// TODO ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ê‚½ï¿½Rï¿½ï¿½ï¿½Xï¿½gï¿½ï¿½ï¿½Nï¿½^ï¿½[ï¿½Eï¿½Xï¿½^ï¿½u
 		componentComboBox = new JComboBox();
 		componentComboBox.addItem("any");
 		
@@ -66,7 +66,7 @@ public class StateEqualsGuardSettingDialog extends AbstractGuardSettingDialog {
 		try {
 			RTSystemProfile profile = new RTSystemProfile(new File(rtState.getFileName()));
 			for(RTSProperties component : profile.componentSet) {
-				componentComboBox.addItem(component.get(Component.PATH_URI));
+				componentComboBox.addItem(component.get(RTComponent.PATH_URI));
 			}
 		} catch (Exception e) {
 			JOptionPane.showMessageDialog(this, "Failed to opening RT System File");
